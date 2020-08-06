@@ -11,7 +11,6 @@ import { TodoService } from '../../services/todo.service';
 export class TodoAddComponent implements OnInit {
   taskObject: Task = {
     title: '',
-    description: ''
   };
 
   constructor(public todoService: TodoService) { }

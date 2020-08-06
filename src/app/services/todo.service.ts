@@ -48,5 +48,11 @@ constructor(public afs: AngularFirestore) {
     this.taskDoc = this.afs.doc(`tasks/${task.id}`);
     this.taskDoc.update(task);
   }
+
+  deleteallTask(event) {
+    this.taskDoc = this.afs.doc(`tasks`);
+    this.taskDoc.delete();
+  }
+
   // CRUD de tareas
 }

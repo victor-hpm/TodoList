@@ -1,11 +1,27 @@
-<div *ngIf="taskArray?.length > 0 else cooffeTime">
-    <ul *ngFor="let task of taskArray">
-        <li>
-            <strong>{{task.title}}</strong>
-        </li>
-    </ul>
-</div>
+<section class="tasks">
+    <div *ngIf="taskArray?.length > 0 else cooffeTime">
+        <ul class="list-instyled">
+            <li class="row align-items-center" *ngFor="let task of taskArray">
+                <strong class="col-9 col-md-9">{{task.title}}</strong>
+                <div class="col-3 col-md-3">
+                    <a href="#" class="icon" (click)="deleteTask($event, task)"><i class="fa fa-trash-alt"></i></a>
+                    <a href="#" class="icon" (click)="editTask($event, task)"><i class="fa fa-edit"></i></a>
+                    <div *ngIf="editOfState && editOfTask.id === task.id">
+                        <form (ngSubmit)="updateTask(task)">
+                            <div class="row">
+                                <div class="input-fiel">
+                                    <input type="text" name="title" placeholder="Edita una tarea" [(ngModel)]="task.title">
+                                </div>
+                                <input type="submit" value="update" class="btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-<ng-template #cooffeTime>
-    <h3>No hay ToDo´s, tomate un café</h3>
-</ng-template>
+    <ng-template #cooffeTime>
+        <h3>No hay ToDo´s, tomate un café</h3>
+    </ng-template>
+</section>

@@ -1,3 +1,17 @@
-.input-group-text {
-    cursor: pointer;
+button {
+    background-image: url(../../../assets/images/add.svg);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 0px solid;
+}
+
+input {
+    background-color: rgba( 0, 0, 0, 0.01);
+    outline: none;
+    border: 0;
+}
+
+.form-control {
+    border: 0px solid;
 }
