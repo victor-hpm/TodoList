@@ -1,0 +1,11 @@
+<div *ngIf="taskArray?.length > 0 else cooffeTime">
+    <ul *ngFor="let task of taskArray">
+        <li>
+            <strong>{{task.title}}</strong>
+        </li>
+    </ul>
+</div>
+
+<ng-template #cooffeTime>
+    <h3>No hay ToDo´s, tomate un café</h3>
+</ng-template>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todolist-8a9ab": {
+      "hosting": {
+        "todoList": [
+          "todolist-8a9ab"
+        ]
+      }
+    }
+  }
+}
